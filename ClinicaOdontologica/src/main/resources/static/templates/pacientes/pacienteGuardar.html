@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Pacientes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+        /* Estilos CSS aquí */
+
+        body {
+            background-color: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .clinic-header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Estilos para la barra de navegación */
+        .nav-pills .nav-link {
+            color: #1c1f22; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente */
+        }
+
+        .nav-pills .nav-link:hover {
+            color: #007bff; /* Color del texto al pasar el cursor */
+        }
+
+        /* Estilos para el formulario de guardar odontólogo */
+        .form-group label {
+            color: #343a40; /* Color del texto */
+            font-weight: bold; /* Negrita */
+        }
+
+        #btn-save-odontologo {
+            margin-top: 10px; /* Espacio superior */
+        }
+
+        /* Estilos para la respuesta */
+        #response {
+            margin-top: 10px; /* Espacio superior */
+            display: none; /* Ocultar inicialmente */
+        }
+
+          /* Cambio de color de fondo del formulario */
+        .form-container {
+            background-color: #cfe2ff; /* Azul claro */
+            padding: 20px;
+            border-radius: 5px;
+        }
+            .clinic-footer {
+                background-color: #007bff;
+                color: #ffffff;
+                text-align: center;
+                align-content: center;
+                margin-top: 30px;
+            }
+    </style>
+</head>
+<body>
+
+<div class="container clinic-header">
+  <h1>Clínica Odontológica Springfield - Pacientes</h1>
+</div>
+
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="../../index.html"> Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pacienteListar.html">Listado de Pacientes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pacienteGuardar.html">Guardar Paciente</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pacienteEliminar.html">Eliminar Paciente</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pacienteActualizar.html">Actualizar Paciente</a>
+    </li>
+  </ul>
+  <hr>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-7 form-container">
+
+      <h3 class="justify-content-center">Guardar paciente nuevo</h3>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-9 form-container">
+            <h4>Formulario de Ingreso</h4>
+            <hr>
+            <form id="save_paciente">
+              <div class="form-group">
+                <label class="control-label" for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="cedula">Cédula:</label>
+                <input type="text" class="form-control" id="cedula" name="cedula" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="fechaIngreso">Fecha de Ingreso:</label>
+                <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
+              </div>
+
+              <!-- domicilio -->
+              <div class="form-group">
+                <label class="control-label" for="calle">Calle:</label>
+                <input type="text" class="form-control" id="calle" name="calle" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="numero">Número:</label>
+                <input type="number" class="form-control" id="numero" name="numero" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="localidad">Localidad:</label>
+                <input type="text" class="form-control" id="localidad" name="localidad" required>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="provincia">Provincia:</label>
+                <input type="text" class="form-control" id="provincia" name="provincia" required>
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="btn-save-paciente">Guardar Paciente</button> </form>
+          </div>
+        </div>
+      </div>
+      <div id="response" style="display:none; margin-top:10px"></div>
+    </div>
+  </div>
+</div>
+<footer class="container clinic-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">Trabajo Práctico Final - Back End I - Digital House</p>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="../pacientes/pacientePost.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

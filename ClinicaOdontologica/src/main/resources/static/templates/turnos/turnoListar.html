@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Turnos</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+
+        body {
+            background-color: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .clinic-header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Estilos para la barra de navegación */
+        .nav-pills .nav-link {
+            color: #1c1f22; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente */
+        }
+
+        .nav-pills .nav-link:hover {
+            color: #007bff; /* Color del texto al pasar el cursor */
+        }
+
+        /* Estilos para la tabla de odontólogos */
+        .table th, .table td {
+            text-align: center;
+        }
+
+        /* Cambio de color de fondo del formulario */
+        .form-container {
+            background-color: #cfe2ff; /* Azul claro */
+            padding: 20px;
+            border-radius: 5px;
+        }
+          .clinic-footer {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            align-content: center;
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container clinic-header">
+  <h1>Clínica Odontológica Springfield - Turnos</h1>
+</div>
+
+<div class="container text-center">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="../../index.html"> Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoListar.html">Listado de Turnos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoGuardar.html">Guardar Turno</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoEliminar.html">Eliminar Turno</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoActualizar.html">Actualizar Turno</a>
+    </li>
+  </ul>
+  <hr>
+
+  <div class="container">
+    <h2>Listado de Turnos</h2>
+    <table class="table table-hover">
+      <thead>
+
+      <tr>
+        <th>ID</th>
+        <th>Paciente ID</th>
+        <th>Odontólogo ID</th>
+        <th>Fecha Turno</th>
+      </tr>
+
+      </tr>
+      </thead>
+      <tbody id="turnos_list">
+      </tbody>
+    </table>
+  </div>
+</div>
+<footer class="container clinic-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">Trabajo Práctico Final - Back End I - Digital House</p>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="turnoGet.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

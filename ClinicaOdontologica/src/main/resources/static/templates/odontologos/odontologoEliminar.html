@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Odontólogos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        /* Estilos CSS aquí */
+
+        body {
+            background-color: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .clinic-header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Estilos para la barra de navegación */
+        .nav-pills .nav-link {
+            color: #1c1f22; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente */
+        }
+
+        .nav-pills .nav-link:hover {
+            color: #007bff; /* Color del texto al pasar el cursor */
+        }
+
+        /* Estilos para el formulario de eliminar odontólogo */
+        .form-group label {
+            color: #343a40; /* Color del texto */
+            font-weight: bold; /* Negrita */
+        }
+
+        #btn-delete-odontologo {
+            margin-top: 10px; /* Espacio superior */
+        }
+
+        /* Estilos para la respuesta */
+        #response {
+            margin-top: 10px; /* Espacio superior */
+            display: none; /* Ocultar inicialmente */
+        }
+
+     /* Cambio de color de fondo del formulario */
+        .form-container {
+            background-color: #cfe2ff; /* Azul claro */
+            padding: 20px;
+            border-radius: 5px;
+        }
+          .clinic-footer {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            align-content: center;
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container clinic-header">
+    <h1>Clínica Odontológica Springfield - Odontólogos</h1>
+</div>
+
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="../../index.html"> Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="odontologoListar.html">Listado de Odontologos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="odontologoGuardar.html">Guardar Odontólogo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="odontologoEliminar.html">Eliminar Odontólogo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="odontologoActualizar.html">Actualizar Odontólogo</a>
+        </li>
+    </ul>
+    <hr>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-7 form-container">
+            <h3>Eliminar Odontólogo</h3>
+            <form id="delete_odontologo">
+                <div class="form-group">
+                    <label class="control-label" for="odontologoID">Odontólogo a ser eliminado:</label>
+                    <input type="text" class="form-control" id="odontologoID"
+                           placeholder="Ingrese el ID del odontólogo a eliminar"
+                           name="odontologoID" required>
+                </div>
+
+                <button type="submit" class="btn btn-danger"
+                        id="btn-delete-odontologo">Eliminar</button>
+            </form>
+            <div id="response" style="display:none; margin-top:10px"></div>
+        </div>
+    </div>
+</div>
+<footer class="container clinic-footer">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">Trabajo Práctico Final - Back End I - Digital House</p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="odontologoDelete.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

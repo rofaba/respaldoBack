@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Odontológica</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .clinic-header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .clinic-section {
+            margin-top: 30px;
+        }
+
+        .card {
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .clinic-footer {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            align-content: center;
+            margin-top: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-between align-items-center clinic-header">
+    <h1 class="ml-1">Clínica Odontológica Springfield</h1>
+    <div>
+        <div class = "block justify-content-center">
+            <img src="./img/ned.png" alt="Usuario Ned" width="50" height="50">
+            <p><small>Mr.Flanders</small></p>
+        </div>
+        <a class="btn btn-danger hover" href="/logout">Logout</a>
+    </div>
+
+
+</div>
+
+<div class="container clinic-section">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./img/pacientes.webp" class="card-img-top h-60" alt="Imagen Pacientes">
+                <div class="card-body text-center d-block align-items-center">
+                    <h5 class="card-title">Pacientes</h5>
+                    <p class="card-text">Gestión de pacientes.</p>
+                    <a href="./templates/pacientes/pacientesMain.html" class="btn btn-primary">Ir a Pacientes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./img/odontologos.jpeg" class="card-img-top h-60" alt="Imagen Odontólogos">
+                <div class="card-body text-center d-block align-items-center">
+                    <h5 class="card-title">Odontólogos</h5>
+                    <p class="card-text">Gestión de odontólogos.</p>
+                    <a href="./templates/odontologos/odontologosMain.html" class="btn btn-primary">Ir a Odontólogos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./img/turnos.jpg" class="card-img-top h-60" alt="Imagen Turnos">
+                <div class="card-body text-center d-block align-items-center">
+                    <h5 class="card-title">Turnos</h5>
+                    <p class="card-text">Gestión de turnos.</p>
+                    <a href="./templates/turnos/turnosMain.html" class="btn btn-primary">Ir a Turnos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container clinic-footer">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">Trabajo Práctico Final - Back End I - Digital House</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

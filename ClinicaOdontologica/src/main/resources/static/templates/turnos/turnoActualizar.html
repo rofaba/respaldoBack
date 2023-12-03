@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Turnos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+        body {
+            background-color: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .clinic-header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+
+        .nav-pills .nav-link {
+            color: #1c1f22; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente */
+        }
+
+        .nav-pills .nav-link:hover {
+            color: #007bff; /* Color del texto al pasar el cursor */
+        }
+
+        /* Estilos para el formulario de actualización */
+        .form-group label {
+            background-color: #cfe2ff;
+            color: #343a40; /* Color del texto */
+            font-weight: bold; /* Negrita */
+        }
+
+        #btn-update-odontologo {
+            margin-top: 10px; /* Espacio superior */
+        }
+
+        /* Estilos para la respuesta */
+        #response {
+            margin-top: 10px; /* Espacio superior */
+            display: none; /* Ocultar inicialmente */
+        }
+
+        /* Cambio de color de fondo del formulario */
+        .form-container {
+            background-color: #cfe2ff; /* Azul claro */
+            padding: 20px;
+            border-radius: 5px;
+        }
+          .clinic-footer {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            align-content: center;
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container clinic-header">
+  <h1>Clínica Odontológica Springfield - Pacientes</h1>
+</div>
+
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="../../index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoListar.html">Listado de Turnos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoGuardar.html">Guardar Turno</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoEliminar.html">Eliminar Turno</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="turnoActualizar.html">Actualizar Turno</a>
+    </li>
+  </ul>
+  <hr>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7 form-container">
+      <h3 style="color: #343a40">Actualizar Turno</h3>
+      <form id="update_turno">
+        <div class="form-group">
+          <label class="control-label" for="turno_id">ID:</label>
+          <input type="text" class="form-control" id="turno_id"
+                 placeholder="Ingrese el ID del turno a actualizar"
+                 name="turno_id" required>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="paciente_id">Paciente ID:</label>
+          <input type="text" class="form-control" id="paciente_id" name="paciente_id" required>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="odontologo_id">Odontólogo ID:</label>
+          <input type="text" class="form-control" id="odontologo_id" name="odontologo_id" required>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="fecha">Fecha Turno:</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" required>
+        </div>
+
+        <button type="submit" class="btn btn-danger"
+                id="btn-update-turno">Actualizar</button>
+      </form>
+      <div id="response"></div>
+    </div>
+  </div>
+</div>
+<footer class="container clinic-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">Trabajo Práctico Final - Back End I - Digital House</p>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="turnoUpdate.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
